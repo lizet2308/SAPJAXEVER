@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>indice de masa corporal</title>
+</head>
+<body>
+    <form action="/imc" method="post">
+        <table width="300" border="1" height="300">
+            <tr align="center">
+                <td><label for="n1">PESO</label></td>
+                <td><input type="text" name="t1" value="{{pe}}"></td>
+
+
+            </tr>
+            <tr align="center">
+                <td><label for="n2">ALTURA</label></td>
+                <td><input type="text" name="t2" value="{{al}}"></td>
+            </tr>
+
+            <tr align="center">
+                <td><label for="n3">IMC</label></td>
+                <td><input type="text" name="t3" value="{{IM}}"></td>
+            </tr>
+
+            <tr align="center">
+                <td><label for="n4">Estado</label></td>
+                <td><input type="text" name="t4" value="{{es}}"></td>
+            </tr>
+            <tr align="center">
+                <td colspan="2">
+                    <input type="submit" value="Calcular">
+
+                </td>
+            </tr>
+        </table>
+
+        {% if IM is not none %}
+            <h4>su indice de masa corporal es {{IM}}</h4>
+        {% endif %}
+    </form>
+</body>
+</html>
